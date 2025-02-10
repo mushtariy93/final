@@ -1,16 +1,15 @@
-// import {  IProduct, } from '@/types'
-import { mainApi } from './index'
+import { api } from "./index";
 
-const extendedApi = mainApi.injectEndpoints({
+const productApi = api.injectEndpoints({
   endpoints: (build) => ({
-    getProducts: build.query<any, any>({
-      query: (params) => ({
-        url:'products',
-        method: "GET",
-        params
-      }),
+    getProducts: build.query({
+      query: ({ limit = 10 }) => `/products?limit=${limit}`,
+    }),
+    getProductById: build.query({
+      query: (id) => `/products/${id}`,
     }),
   }),
-})
+  overrideExisting: false,
+});
 
-export const { useGetProductsQuery } = extendedApi
+export const { useGetProductsQuery, useGetProductByIdQuery } = productApi;

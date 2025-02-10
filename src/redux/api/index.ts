@@ -1,7 +1,10 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-export const mainApi = createApi({
-  reducerPath: 'mainApi',
-  baseQuery: fetchBaseQuery({ baseUrl: import.meta.env.VITE_BASE_URL }),
+export const api = createApi({
+  reducerPath: "mainApi",
+  baseQuery: fetchBaseQuery({
+    baseUrl: import.meta.env.VITE_BASE_URL,
+  }),
   endpoints: () => ({}),
-})
+  tagTypes: ["Products"],
+});

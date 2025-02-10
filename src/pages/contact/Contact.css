@@ -1,0 +1,61 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.contact-page {
+  background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20230713/pngtree-minimalist-studio-background-with-window-shadows-for-product-display-in-empty-image_3869070.jpg'); 
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  padding: 20px;
+}
+
+.contact-container {
+  background: rgba(0, 0, 0, 0.6); /* Orqa fonni biroz qoraytiradi */
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  display: grid;
+  gap: 20px;
+}
+
+.info-item h2 {
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+}
+
+.info-item p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+a {
+  color: #ff8c00;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
